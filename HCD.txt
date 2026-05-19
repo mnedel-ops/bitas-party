@@ -1,0 +1,10 @@
+	High Concept Document (HCD) para o jogo da Game Jam da UFN, primeiro semestre de 26, com o tema de "Convocados".
+	Vamos fazer um Mario Party centrado no Bitola.
+	Os bitas do bitasverso sao convocados paradecidir quem eh O Bitas. Para isso, eles resolvem em varias atividades que o bitas faria.
+	Uma lista, nao selecionada de jogos:
+	1. Gritar no microfone -> jogador precisa gritar mais alto;
+	2. Mirar no CS -> jogador precisa mirar num alvo, usando a sensibilidade baixa;
+	3. Calculo -> desenhar as respostas para os problemas de calculo;
+	4. Farmar aura -> jogo de ritmo, estilo Friday Night Funky;
+	5. Montar robo seguidor de linha -> precisa instruir o robo a percorrer um labirinto, coloca apenas as direcoes;
+	6.
