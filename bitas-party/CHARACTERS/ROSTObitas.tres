@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dtm4f7sh37o77"]
+
+[ext_resource type="Texture2D" uid="uid://ivf4ivptac2p" path="res://CHARACTERS/NORMAL - bitas_BITAS - texture.png" id="1_6323l"]
+
+[resource]
+shading_mode = 0
+diffuse_mode = 3
+albedo_color = Color(1, 1, 1, 0)
+albedo_texture = ExtResource("1_6323l")
+texture_filter = 0
