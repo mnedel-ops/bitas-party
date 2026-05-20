@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://b8nyxr8ay8blh"]
 
 [ext_resource type="PackedScene" uid="uid://cbnnhrfblhhk2" path="res://CHARACTERS/normal_bitas.tscn" id="1_o02vu"]
+[ext_resource type="PackedScene" uid="uid://1ehrqpvgb2ja" path="res://ENVIRONMENT/CENARIO - academia.glb" id="2_7w86a"]
 
 [node name="Node3D" type="Node3D" unique_id=2112251127]
 
 [node name="NORMAL - bitas" parent="." unique_id=776596578 instance=ExtResource("1_o02vu")]
+
+[node name="CENARIO - academia" parent="." unique_id=789795227 instance=ExtResource("2_7w86a")]

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://buhha8r6pnb72"]
+
+[ext_resource type="PackedScene" uid="uid://1ehrqpvgb2ja" path="res://ENVIRONMENT/CENARIO - academia.glb" id="1_ogoi2"]
+
+[node name="CENARIO - academia" unique_id=789795227 instance=ExtResource("1_ogoi2")]
+
+[node name="barbell" parent="." index="1" unique_id=995511095]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 100.8022, -116.24781)
