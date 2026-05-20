@@ -7,4 +7,5 @@
 	3. Calculo -> desenhar as respostas para os problemas de calculo;
 	4. Farmar aura -> jogo de ritmo, estilo Friday Night Funky;
 	5. Montar robo seguidor de linha -> precisa instruir o robo a percorrer um labirinto, coloca apenas as direcoes;
-	6.
+	6. Bitolas treinando -> Ele na academia e precisa corrigir a posicao.
+	7. Duelo -> Bitas duelando.
