@@ -1,10 +1,26 @@
 [gd_scene format=3 uid="uid://b8nyxr8ay8blh"]
 
 [ext_resource type="PackedScene" uid="uid://cbnnhrfblhhk2" path="res://CHARACTERS/normal_bitas.tscn" id="1_o02vu"]
+[ext_resource type="Material" uid="uid://bhait2lwogsdj" path="res://SHADER_mat.tres" id="1_s2wow"]
 [ext_resource type="PackedScene" uid="uid://1ehrqpvgb2ja" path="res://ENVIRONMENT/CENARIO - academia.glb" id="2_7w86a"]
 
 [node name="Node3D" type="Node3D" unique_id=2112251127]
 
-[node name="NORMAL - bitas" parent="." unique_id=776596578 instance=ExtResource("1_o02vu")]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=805089234]
+material = ExtResource("1_s2wow")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
 
-[node name="CENARIO - academia" parent="." unique_id=789795227 instance=ExtResource("2_7w86a")]
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=960577596]
+size = Vector2i(1920, 1080)
+
+[node name="NORMAL - bitas" parent="SubViewportContainer/SubViewport" unique_id=776596578 instance=ExtResource("1_o02vu")]
+
+[node name="CENARIO - academia" parent="SubViewportContainer/SubViewport" unique_id=789795227 instance=ExtResource("2_7w86a")]
+
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport" unique_id=2000730532]
+transform = Transform3D(0.9218632, 0.21784963, -0.32048386, -2.4642489e-08, 0.8270217, 0.56216997, 0.38751566, -0.5182438, 0.76240087, -81.36078, 249.51555, 184.2869)
