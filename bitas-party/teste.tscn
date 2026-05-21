@@ -16,7 +16,9 @@ grow_vertical = 2
 stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=960577596]
+handle_input_locally = false
 size = Vector2i(1920, 1080)
+render_target_update_mode = 4
 
 [node name="NORMAL - bitas" parent="SubViewportContainer/SubViewport" unique_id=776596578 instance=ExtResource("1_o02vu")]
 

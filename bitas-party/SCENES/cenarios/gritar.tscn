@@ -1,0 +1,51 @@
+[gd_scene format=4 uid="uid://rwxqn0rmv5t3"]
+
+[ext_resource type="Texture2D" uid="uid://cj0khkyd40ymv" path="res://ENVIRONMENT/CENARIO - ufn_ufn.png" id="1_btbqq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vp4qs"]
+resource_name = "Material.001"
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("1_btbqq")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_6q4hj"]
+resource_name = "CENARIO - ufn_Cube"
+_surfaces = [{
+"aabb": AABB(-699.99994, 138.58334, 0, 1399.9999, 454.33963, 482.69577),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAAAAIABAACAAUA"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("AAAAAAAAAAD/////AAAAAP//AAAAAAAAAAD//wAAAAAAAAAA//8AAP//AAD//wAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1omjy"]
+resource_name = "CENARIO - ufn_Plane"
+_surfaces = [{
+"aabb": AABB(-699.99994, 138.58334, 0, 1399.9999, 454.33963, 482.69577),
+"attribute_data": PackedByteArray("AADSmP//AAD//9KYAAAAAAAA/////9KY/////wAA0pg="),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
+"material": SubResource("StandardMaterial3D_vp4qs"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAAAAAID/////AAAAgP//AAAAAACAAAD//wAAAIAAAAAA////v///AAAAAP+///8AAP///78AAAAAAAD/v/9/////f////3////9///////9/////f////3////9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_6q4hj")
+
+[node name="gritar" type="Node3D" unique_id=1228835209]
+
+[node name="CENARIO - ufn" type="Node3D" parent="." unique_id=612125329]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+
+[node name="piso" type="MeshInstance3D" parent="CENARIO - ufn" unique_id=2014264477]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -137.11688, 0)
+mesh = SubResource("ArrayMesh_1omjy")
