@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bhhjcnj8e840v"]
 
 [ext_resource type="Script" uid="uid://dfpl6t6y8w178" path="res://SCRIPTS/main_menu.gd" id="1_xfrmw"]
-[ext_resource type="PackedScene" uid="uid://kvygvae1vx45" path="res://SCENES/player_config.tscn" id="2_player_config"]
 
 [node name="mainMenu" type="Control" unique_id=572449938]
 layout_mode = 3
@@ -11,7 +10,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xfrmw")
-player_config_scene = ExtResource("2_player_config")
 
 [node name="background" type="ColorRect" parent="." unique_id=1231693289]
 layout_mode = 1
