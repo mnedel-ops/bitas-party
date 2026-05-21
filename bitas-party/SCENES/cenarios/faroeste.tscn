@@ -1,0 +1,104 @@
+[gd_scene format=4 uid="uid://5nvibna8fm30"]
+
+[ext_resource type="Texture2D" uid="uid://dnd6lqbwvs7rm" path="res://ENVIRONMENT/CENARIO - faroeste_faroeste.png" id="1_0ccll"]
+[ext_resource type="Texture2D" uid="uid://boa3dny21l1n4" path="res://ENVIRONMENT/CENARIO - faroeste_areia.jpg" id="2_lvmg8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hrsww"]
+resource_name = "Material"
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_0ccll")
+metallic = 1.0
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_operator = 1
+emission_texture = ExtResource("1_0ccll")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_p6mkk"]
+_surfaces = [{
+"aabb": AABB(-163.48938, -6.658908, -12.294085, 305.44714, 68.89341, 28.341713),
+"format": 34896613377,
+"index_count": 117,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAwAEAAEAAwAFAAQABAAFAAYABwAGAAUABgAHAAgABgAIAAkACAAHAAoABwALAAwABwANAAsADAALAA4ADAAOAA8ADQAQABEADQASABAAEgATABAAEgAUABMAFQAWABcAFwAYABYAFwAZABgAFgAYABoAFQAbABYAFgAaABsAHAAbABUAGwAaAB0AHAAeABsAGwAdAB4AHwAeABwAHgAdACAAHwAhACAAHgAgACIAHwAgACIAHwAiAB4AIwAkACUAIwAmACQAJwAoACkAJwAqACgAKwAsAC0AKwAuACwA"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 47,
+"vertex_data": PackedByteArray("Ofu+GAtvAADgrBvMC28AADn7G8wLbwAARKW+GAtvAAAxpSecC28AAMGKvhgLbwAAwYrgmwtvAABiab4YC28AALNx9dsLbwAAwYr12wtvAABiac+sC28AAKhSgIsLbwAAYmmAiwtvAACoUr4YC28AAKhSL7kAAAAAYmkvuQAAAAB8UBvMC28AAC5SaawLbwAAfFC+GAtvAAA1NRvMC28AADU1vhgLbwAAVFW+GAtvAAAAAL4Y//8AAAAAvhgLbwAAAAAAAP//AAAAAAAAC28AAFRVAAD//wAAVFW+GP//AACpqr4YC28AAKmqAAD//wAAqaq+GP//AAD//74YC28AAP//AAD//wAA//8AAAtvAAD//74Y//8AAAc1//8LbwAAMAS+GAtvAAAHNb4YC28AADAE//8LbwAAwYrqm0lvAABEpQW+YRwAADGlHZzObgAAwYoFvmEcAAAhxWF8SW8AAKXffZ5hHAAAkt+UfM5uAAAhxX2eYRwAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_sxm8o"]
+resource_name = "CENARIO - faroeste_Plane"
+_surfaces = [{
+"aabb": AABB(-163.48938, -6.658908, -12.294085, 305.44714, 68.89341, 28.341713),
+"attribute_data": PackedByteArray("r/ZF2dKhfJuv9nyblJlF2YCZAKzcfEXZ3HwZrLhYRdm6YQaW3HwGlrhYRKYaQL2xuFi9sRpARdnAPXyblT9npsA9Rdk0IHybNCBF2TV8I9lgIIvvYCAj2TV8i+8kIMDv6A/c9egPwO8kINz16A9Q8PAf3PXwH1Dw6A/c9WAgUPA1fLb1NXxQ8GAgtvXqXGIBcSAuV+pcLldxIGIBNXwj2WAgi+9gICPZNXyL7zV8I9lgIIvvYCAj2TV8i+9gIFDwNXy29TV8UPBgILb1YCBQ8DV8tvU1fFDwYCC29bhYvbEaQHybuFh8mxpAvbHcfBmslJl8m4CZAKzcfHyb3HwZrJSZfJuAmQCs3Hx8mw=="),
+"format": 34896613399,
+"index_count": 117,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAwAEAAEAAwAFAAQABAAFAAYABwAGAAUABgAHAAgABgAIAAkACAAHAAoABwALAAwABwANAAsADQAOAA8ADQAQAA4AEAARAA4AEAASABEAEwAUABUAEwAWABQAFwAYABkAFwAaABgAGwAcAB0AGwAeABwAHwAgACEAHwAiACAAIwAkACUAIwAmACQAJwAoACkAJwAqACgAKwAsAC0AKwAuACwALwAwADEALwAyADAAMwA0ADUAMwA2ADQANwA4ADkANwA6ADgAOwA8AD0AOwA+ADwAPwBAAEEAPwBCAEAA"),
+"material": SubResource("StandardMaterial3D_hrsww"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 67,
+"vertex_data": PackedByteArray("Ofu+GAtvAIDgrBvMC28AgDn7G8wLbwCARKW+GAtvAIAxpSecC28AgMGKvhgLbwCAwYrgmwtvAIBiab4YC28AgLNx9dsLbwCAwYr12wtvAIBiac+sC28AgKhSgIsLbwCAYmmAiwtvAICoUr4YC28AgHxQG8wLbwCALlJprAtvAIB8UL4YC28AgDU1G8wLbwCANTW+GAtvAIBUVb4YC2//vwAAvhj///+/AAC+GAtv/79UVb4Y////vwAAvhgLb/+/AAAAAP///78AAL4Y////vwAAAAALb/+///++GAtvAAD//wAA//8AAP//vhj//wAA//8AAAtvAAAAAL4Y//8AAFRVAAD//wAAVFW+GP//AAAAAAAA//8AAAc1//8LbwAAMAS+GAtvAAAHNb4YC28AADAE//8LbwAAqaq+GAtv/79UVb4Y////v1RVvhgLb/+/qaq+GP///7///74YC2//v6mqvhj///+/qaq+GAtv/7///74Y////v1RVvhj//wAAqaoAAP//AACpqr4Y//8AAFRVAAD//wAAqaq+GP//AAD//wAA//8AAP//vhj//wAAqaoAAP//AABiaYCLC2//n6hSL7kAAP+fYmkvuQAA/5+oUoCLC2//n8GK6ptJb/+fRKUFvmEc/58xpR2czm7/n8GKBb5hHP+fIcVhfElv/5+l332eYRz/n5LflHzObv+fIcV9nmEc/5//f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f///////f/7//3/+//9/////f/9/AAD/fwAA/38AAP9/AAD/v/9//7//f/+//3//v/9//v//f/7//3/+//9//v//f////3////9//v//f/7//3////9//v//f/7//3////9/////f/7//3/+//9/////f/7//3/+//9//v//f/7//3/+//9//v//f/7//3/+//9/////f////3////9/////f/7//3/+//9//v//f////3/+//9//v//f/7//3////9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_p6mkk")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c0o5k"]
+resource_name = "areia"
+cull_mode = 2
+albedo_color = Color(0, 0, 0, 1)
+metallic = 1.0
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_operator = 1
+emission_texture = ExtResource("2_lvmg8")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vxpwi"]
+_surfaces = [{
+"aabb": AABB(-164.44884, 0, -13.787565, 328.89767, 1e-05, 83.189865),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "areia",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAP//AAD//wAAAAAAAP//AAD//wAAAAAAAAAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4baba"]
+resource_name = "CENARIO - faroeste_Plane_004"
+_surfaces = [{
+"aabb": AABB(-164.44884, 0, -13.787565, 328.89767, 1e-05, 83.189865),
+"attribute_data": PackedByteArray("eAFHQnD6hwFw+kdCeAGHAQ=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_c0o5k"),
+"name": "areia",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAP///7///wAAAAD/v///AAD///+/AAAAAAAA/7////9/////f////3////9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_vxpwi")
+
+[node name="faroeste" type="Node3D" unique_id=1542932593]
+
+[node name="CENARIO - faroeste" type="Node3D" parent="." unique_id=241270049]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+
+[node name="fundo" type="MeshInstance3D" parent="CENARIO - faroeste" unique_id=154129262]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.568233, 0, -21.969896)
+mesh = SubResource("ArrayMesh_sxm8o")
+
+[node name="piso" type="MeshInstance3D" parent="CENARIO - faroeste" unique_id=199499159]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.326721, 0)
+mesh = SubResource("ArrayMesh_4baba")

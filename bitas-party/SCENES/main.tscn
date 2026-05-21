@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://ciw13oatc2h2y"]
+
+[ext_resource type="Material" uid="uid://bhait2lwogsdj" path="res://SHADER_mat.tres" id="1_xh1h4"]
+
+[node name="main" type="Node3D" unique_id=983851365]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=2143705609]
+material = ExtResource("1_xh1h4")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=27200324]
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport" unique_id=942540562]
+current = true
+
+[node name="HUD" type="CanvasLayer" parent="SubViewportContainer" unique_id=2050847734]
+
+[node name="Control" type="Control" parent="SubViewportContainer/HUD" unique_id=1066892935]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
