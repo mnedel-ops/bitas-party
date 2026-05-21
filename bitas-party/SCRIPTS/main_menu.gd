@@ -1,13 +1,13 @@
 extends Control
 
-@export var cena_jogo: PackedScene
+@export var player_config_scene: PackedScene
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
-		comecar_jogo()
+		go_to_player_config()
 
-func comecar_jogo():
-	if cena_jogo:
-		get_tree().change_scene_to_packed(cena_jogo)
+func go_to_player_config() -> void:
+	if player_config_scene:
+		get_tree().change_scene_to_packed(player_config_scene)
 	else:
-		print("Burro, nao colocou a cena")
+		print("Erro: player_config_scene não foi configurada!")
