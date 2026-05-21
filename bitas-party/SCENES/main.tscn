@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://ciw13oatc2h2y"]
+[gd_scene load_steps=2 format=3 uid="uid://ciw13oatc2h2y"]
 
 [ext_resource type="Material" uid="uid://bhait2lwogsdj" path="res://SHADER_mat.tres" id="1_xh1h4"]
 

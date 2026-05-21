@@ -1,7 +1,6 @@
 [gd_scene format=4 uid="uid://coqir6g8yl5s6"]
 
 [ext_resource type="AnimationLibrary" uid="uid://dh7summx02t5k" path="res://ANIMATIONS/ANIMATIONS - bitas.glb" id="1_w88uk"]
-[ext_resource type="Texture2D" uid="uid://b335ir6e4f7pc" path="res://CHARACTERS/HEROI - bitas_BITAS - texture.png" id="2_c58wk"]
 [ext_resource type="Material" uid="uid://brrek5ppk85cy" path="res://SCENES/bitas/bitas_rosto.tres" id="2_rrfwt"]
 [ext_resource type="Texture2D" uid="uid://uk55t14xmc4s" path="res://CHARACTERS/HEROI - textura.png" id="3_lpya8"]
 
@@ -109,7 +108,6 @@ bind/24/pose = Transform3D(-99.52252, -1.7363642, -9.586635, -9.569569, -0.88371
 resource_name = "Material"
 cull_mode = 2
 shading_mode = 0
-albedo_texture = ExtResource("2_c58wk")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_npq1o"]
 resource_name = "HEROI - bitas_Cube_002"
@@ -133,12 +131,9 @@ blend_shape_mode = 0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aus7g"]
 resource_name = "HEROI"
 cull_mode = 2
+shading_mode = 0
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("3_lpya8")
-metallic = 1.0
-emission_enabled = true
-emission_operator = 1
-emission_texture = ExtResource("3_lpya8")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_qjqj5"]
 resource_name = "HEROI - bitas_Cube_003"
