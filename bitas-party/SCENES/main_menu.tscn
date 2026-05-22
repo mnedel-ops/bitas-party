@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bhhjcnj8e840v"]
 
 [ext_resource type="Script" uid="uid://dfpl6t6y8w178" path="res://SCRIPTS/main_menu.gd" id="1_xfrmw"]
+[ext_resource type="Texture2D" uid="uid://cr5puqanllulc" path="res://UI/background.png" id="2_273u5"]
+[ext_resource type="Texture2D" uid="uid://dikd7hb6rqljk" path="res://UI/start.png" id="3_1hj21"]
 
 [node name="mainMenu" type="Control" unique_id=572449938]
 layout_mode = 3
@@ -11,22 +13,11 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xfrmw")
 
-[node name="background" type="ColorRect" parent="." unique_id=1231693289]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Background" type="Sprite2D" parent="." unique_id=1587714633]
+position = Vector2(960, 540)
+texture = ExtResource("2_273u5")
 
-[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1174262365]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Label" type="Label" parent="CenterContainer" unique_id=1296789404]
-layout_mode = 2
-text = "PRESS START TO PLAY!	"
+[node name="Start" type="Sprite2D" parent="." unique_id=1533635893]
+position = Vector2(990, 792)
+scale = Vector2(0.9539877, 0.9539877)
+texture = ExtResource("3_1hj21")
