@@ -192,6 +192,14 @@ mesh = SubResource("ArrayMesh_u1ac2")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 99.64475, -37.245243)
 mesh = SubResource("ArrayMesh_a06xt")
 
+[node name="bench2" type="MeshInstance3D" parent="CENARIO - academia" unique_id=858398048]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 69.74155)
+mesh = SubResource("ArrayMesh_u1ac2")
+
+[node name="barbell2" type="MeshInstance3D" parent="CENARIO - academia" unique_id=1065375466]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 99.64475, -37.245243)
+mesh = SubResource("ArrayMesh_a06xt")
+
 [node name="floor" type="MeshInstance3D" parent="CENARIO - academia" unique_id=1747170147]
 mesh = SubResource("ArrayMesh_a78li")
 
