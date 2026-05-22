@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bdw4yxb0du8ol"]
+
+[ext_resource type="PackedScene" uid="uid://rwxqn0rmv5t3" path="res://SCENES/cenarios/gritar.tscn" id="1_2kqmn"]
+[ext_resource type="Script" uid="uid://bmrwu4ffiqsn0" path="res://SCENES/Games/Grito/grito.gd" id="1_swqxe"]
+[ext_resource type="PackedScene" uid="uid://dib776w01ihph" path="res://SCENES/bitas/normal.tscn" id="2_7a3t7"]
+[ext_resource type="PackedScene" uid="uid://bk8wwktnwt1ti" path="res://SCENES/bitas/velocista.tscn" id="3_7a3t7"]
+[ext_resource type="Script" uid="uid://bfqpfntwmxvyq" path="res://SCENES/Games/Grito/bitas1_grito.gd" id="3_xm6fn"]
+
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_xm6fn"]
+
+[node name="grito" type="Node3D" unique_id=1017678968]
+script = ExtResource("1_swqxe")
+
+[node name="gritar" parent="." unique_id=1228835209 instance=ExtResource("1_2kqmn")]
+
+[node name="piso" parent="gritar/CENARIO - ufn" parent_id_path=PackedInt32Array(1228835209, 612125329) index="0" unique_id=2014264477]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.5253979, 0, -137.11688, 0)
+
+[node name="NORMAL" parent="." unique_id=1879736487 instance=ExtResource("2_7a3t7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2514658, 0.06355858, 1.9751544)
+script = ExtResource("3_xm6fn")
+
+[node name="VELOCISTA" parent="." unique_id=1959398282 instance=ExtResource("3_7a3t7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8662101, 0, 2.0849109)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=2004704690]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7352005, 4.8620253)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1868633282]
+stream = SubResource("AudioStreamMicrophone_xm6fn")
+bus = &"MicrophoneBus"
+
+[node name="TimerGrito" type="Timer" parent="." unique_id=1683880259]
+wait_time = 4.0
+one_shot = true
+
+[node name="TimerPausa" type="Timer" parent="." unique_id=1234075648]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="TimerGrito" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="TimerPausa" to="." method="_on_timer_pausa_timeout"]
+
+[editable path="gritar"]
