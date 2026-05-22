@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://ciihcr37vg1yl" path="res://SCENES/cenarios/supino.tscn" id="1_es782"]
 [ext_resource type="PackedScene" uid="uid://dib776w01ihph" path="res://SCENES/bitas/normal.tscn" id="2_cvjdn"]
+[ext_resource type="Script" uid="uid://bc53ws116bg3" path="res://SCENES/Games/Supino/bitas1_supino.gd" id="3_68b6a"]
 [ext_resource type="PackedScene" uid="uid://dwt7uo4hvobch" path="res://SCENES/bitas/encanador.tscn" id="3_cvjdn"]
 [ext_resource type="Script" uid="uid://gcc0doyiv0qm" path="res://SCENES/Games/Supino/bitas2_supino.gd" id="4_nv8lf"]
 
@@ -13,19 +14,20 @@
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 150.17973, 0, 86.4888)
 
 [node name="barbell" parent="supino/CENARIO - academia" parent_id_path=PackedInt32Array(1482456991, 789795227) index="2" unique_id=995511095]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 150.17973, 99.64475, 24.647125)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 150.17973, 99.64475, 45.310265)
 
 [node name="bench2" parent="supino/CENARIO - academia" parent_id_path=PackedInt32Array(1482456991, 789795227) index="3" unique_id=858398048]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -130.98874, 0, 86.4888)
 
 [node name="barbell2" parent="supino/CENARIO - academia" parent_id_path=PackedInt32Array(1482456991, 789795227) index="4" unique_id=1065375466]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -130.98874, 99.64475, 26.807716)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -130.98874, 99.64475, 47.47086)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=58988905]
 transform = Transform3D(1, 0, 0, 0, 0.49809435, 0.8671229, 0, -0.8671229, 0.49809435, 0, 2.4132528, 2.1579025)
 
 [node name="NORMAL" parent="." unique_id=1879736487 node_paths=PackedStringArray("bar") instance=ExtResource("2_cvjdn")]
 transform = Transform3D(1, 0, 0, 0, -0.046827514, 0.998903, 0, -0.998903, -0.046827514, -1.2950009, 1.1443962, 0.9930582)
+script = ExtResource("3_68b6a")
 bar = NodePath("../supino/CENARIO - academia/barbell2")
 
 [node name="encanador" parent="." unique_id=1235880812 node_paths=PackedStringArray("bar") instance=ExtResource("3_cvjdn")]

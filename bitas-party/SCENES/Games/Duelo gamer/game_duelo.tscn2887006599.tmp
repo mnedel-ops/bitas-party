@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dchb1f6kid8ml"]
+
+[ext_resource type="Script" uid="uid://c0x3rmcifhcex" path="res://SCENES/Games/Duelo gamer/game_duelo.gd" id="1_r0cl7"]
+[ext_resource type="PackedScene" uid="uid://5nvibna8fm30" path="res://SCENES/cenarios/faroeste.tscn" id="1_s7ve5"]
+[ext_resource type="PackedScene" uid="uid://dib776w01ihph" path="res://SCENES/bitas/normal.tscn" id="2_xq3dx"]
+[ext_resource type="Script" uid="uid://bga3h2txig8ir" path="res://SCENES/Games/Duelo gamer/bitas1_duelo.gd" id="3_xq3dx"]
+[ext_resource type="PackedScene" uid="uid://coqir6g8yl5s6" path="res://SCENES/bitas/heroi.tscn" id="4_0cdwi"]
+[ext_resource type="Script" uid="uid://m0g8eaqqjexo" path="res://SCENES/Games/Duelo gamer/bitas2_duelo.gd" id="5_wlnt3"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xq3dx"]
+sky_top_color = Color(0.5749719, 0.41951475, 1.92523e-07, 1)
+sky_horizon_color = Color(0.77815217, 0.63155985, 0.3451333, 1)
+ground_bottom_color = Color(0.84313726, 0.5803922, 0, 1)
+ground_horizon_color = Color(0.7326586, 0.6637109, 0, 1)
+ground_curve = 0.002588163
+
+[sub_resource type="Sky" id="Sky_0cdwi"]
+sky_material = SubResource("ProceduralSkyMaterial_xq3dx")
+
+[sub_resource type="Environment" id="Environment_wlnt3"]
+background_mode = 2
+sky = SubResource("Sky_0cdwi")
+
+[node name="GameDuelo" type="Node3D" unique_id=315752746]
+script = ExtResource("1_r0cl7")
+
+[node name="faroeste" parent="." unique_id=1542932593 instance=ExtResource("1_s7ve5")]
+transform = Transform3D(9.351896, 0, 0, 0, 6.637604, 0, 0, 0, 14.289993, 0, 0, 0)
+
+[node name="piso" parent="faroeste/CENARIO - faroeste" parent_id_path=PackedInt32Array(1542932593, 241270049) index="1" unique_id=199499159]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.326721, 1.0682373)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="faroeste" unique_id=588533469]
+environment = SubResource("Environment_wlnt3")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="faroeste" unique_id=1872601295]
+light_color = Color(1, 0.6745098, 0, 1)
+
+[node name="NORMAL" parent="." unique_id=1879736487 instance=ExtResource("2_xq3dx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.120339, 0, 1.1601107)
+script = ExtResource("3_xq3dx")
+
+[node name="HEROI" parent="." unique_id=1151296484 instance=ExtResource("4_0cdwi")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0832095, 0, 0.6579218)
+script = ExtResource("5_wlnt3")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=164450894]
+transform = Transform3D(1, 0, 0, 0, 0.9891932, 0.14661829, 0, -0.14661829, 0.9891932, 0, 1.490985, 5.2736464)
+
+[node name="Timer" type="Timer" parent="." unique_id=403124632]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+
+[editable path="faroeste"]
