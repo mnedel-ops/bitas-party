@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b1fcros78dax7"]
+
+[ext_resource type="Texture2D" uid="uid://dxg52mn5drtt8" path="res://UI/texto-fundo.png" id="2_fdaix"]
+
+[node name="Textbox" type="MarginContainer" unique_id=1357768051]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1751508377]
+layout_mode = 2
+texture = ExtResource("2_fdaix")
+region_rect = Rect2(0, 0, 1900, 1082.873)

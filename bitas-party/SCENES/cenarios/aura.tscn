@@ -1,6 +1,10 @@
 [gd_scene format=4 uid="uid://cjxxostxebnrg"]
 
 [ext_resource type="Texture2D" uid="uid://xdy3rxh7qe6i" path="res://ENVIRONMENT/AURA - textura.png" id="1_2lb43"]
+[ext_resource type="PackedScene" uid="uid://ciw13oatc2h2y" path="res://SCENES/main.tscn" id="1_kxvha"]
+[ext_resource type="PackedScene" uid="uid://b1fcros78dax7" path="res://UI/textbox.tscn" id="2_gmjno"]
+[ext_resource type="Script" uid="uid://tvkgq6qtpcxc" path="res://SCRIPTS/canvas_layer.gd" id="3_2qjir"]
+[ext_resource type="FontFile" uid="uid://c7bglr88nop5m" path="res://UI/Merchant Copy.ttf" id="4_sq8s4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_73cvg"]
 resource_name = "Material.001"
@@ -42,10 +46,15 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_elgjy")
 
 [sub_resource type="Environment" id="Environment_gmjno"]
+background_energy_multiplier = 0.0
+ambient_light_energy = 0.0
 
 [node name="aura" type="Node3D" unique_id=563059670]
 
+[node name="main" parent="." unique_id=983851365 instance=ExtResource("1_kxvha")]
+
 [node name="CENARIO - salao-azul" type="Node3D" parent="." unique_id=1910709312]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0655432, -3.8245919)
 
 [node name="mesa" type="MeshInstance3D" parent="CENARIO - salao-azul" unique_id=986539311]
 transform = Transform3D(0.00999999, 0, 0, 0, 0.00999999, 0, 0, 0, 0.00999999, 0.0004317062, 0.1027015, 0.0011871755)
@@ -53,3 +62,29 @@ mesh = SubResource("ArrayMesh_f3rkb")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=295925930]
 environment = SubResource("Environment_gmjno")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1609283486]
+script = ExtResource("3_2qjir")
+
+[node name="Textbox" parent="CanvasLayer" unique_id=1357768051 instance=ExtResource("2_gmjno")]
+anchors_preset = -1
+anchor_right = 0.20663144
+anchor_bottom = 0.20462963
+offset_left = 422.3662
+offset_top = 715.0
+offset_right = 1127.6338
+offset_bottom = 715.0
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/Textbox" unique_id=1366360121]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 14
+
+[node name="tutorial" type="Label" parent="CanvasLayer/Textbox/MarginContainer2" unique_id=1950102665]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_sq8s4")
+theme_override_font_sizes/font_size = 44
+text = "PREPARE-SE para farmar aura!
+Use os W A S D, conforme aparecem na tela, para manter sua aura alta!"
